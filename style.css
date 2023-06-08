@@ -3,14 +3,32 @@ body {
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
     text-align: left;
-    padding-top: 20%;
-    padding-left: 20%;
+    padding-top: 47%;
+    padding-left: 10%;
 }
 
 h1 {
     font-size: 1em;
     color: #eeeeee;
     font-weight: lighter;
+    position: relative;
+}
+
+h1 #icono {
+    position: absolute;
+    top: 18px;
+    left: 35%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background-image: url("./assets/logos/ssr-icon.PNG");
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+h1 #icono:hover {
+    transform: scale(1.05);
 }
 
 h1 #titulo {
