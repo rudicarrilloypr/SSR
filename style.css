@@ -1,0 +1,30 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    padding-top: 20%;
+    padding-left: 20%;
+}
+
+h1 {
+    font-size: 1em;
+    color: #eeeeee;
+    font-weight: lighter;
+}
+
+h1 #titulo {
+    font-size: 1.01em; /* más grande */
+    color: #ffffff; /* resaltado */
+    font-weight: bold;
+}
+
+p {
+    font-size: 1em;
+    color: #fff;
+    transition: 2s all;
+}
+
+p:hover {
+    color: #ff0000;
+}
