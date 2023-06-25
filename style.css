@@ -47,6 +47,23 @@ p:hover {
     color: #ff0000;
 }
 
+@keyframes drop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#icono {
+    animation: drop 2s ease-out;
+}
+
+
+
 /*---------------MAIN SECTION---------------*/
 .container-main {
     width: 75%;
@@ -73,6 +90,10 @@ p:hover {
 .container-main p {
     font-size: 18px;
     margin-top: 20px;
+}
+
+.sections-main {
+    text-align: center;
 }
 
 .container-main .sections-main {
