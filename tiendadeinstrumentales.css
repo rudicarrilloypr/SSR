@@ -1,0 +1,48 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222126;
+}
+
+header .logo {
+    max-width: 50px;
+    margin-top: 10px;
+}
+
+main {
+    text-align: center;
+    margin: 5px;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: #fff;
+    margin: 20px;
+}
+
+h2 {
+    font-family: 'Helvetica Neue', Courier, monospace;
+    font-size: .7em;
+    color: #fff;
+    margin: 20px;
+    width: 350px;
+    margin-left: 60px;
+}
+
+#contactoWhatsApp {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contactoWhatsApp:hover {
+    background-color: #1ebe5f;
+}

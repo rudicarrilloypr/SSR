@@ -4,28 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Instrumentales</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #222126;
-        }
-        .soundcloud-player {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-    </style>
+    <link rel="stylesheet" href="tiendadeinstrumentales.css">
 </head>
 <body>
-    <div class="soundcloud-player">
+    <header>
+        <a href="main.html">
+            <img src="./assets/logos/ssr-icon.PNG" alt="SSR Logo" class="logo">
+            </a>
+    </header>
+    <main>
+        <h1>Instrumentales Disponibles</h1>
+        <h2>Elige la instrumental que quieres y contactanos presionando el boton de comprar Instrumemtal</h2>
         <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1765022901%3Fsecret_token%3Ds-CtoUZ8JblhI&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-            <a href="https://soundcloud.com/sociedadsecretadelritmo" title="S.S.R." target="_blank" style="color: #cccccc; text-decoration: none;">S.S.R.</a> · <a href="https://soundcloud.com/sociedadsecretadelritmo/sets/tienda-de-beats" title="Tienda de Instrumentales" target="_blank" style="color: #cccccc; text-decoration: none;">Tienda de Instrumentales</a>
-        </div>
-    </div>
+        <button id="contactoWhatsApp">Comprar Instrumental</button>
+    </main>
+    <script src="whatsappbutton.js"></script>
 </body>
 </html>
