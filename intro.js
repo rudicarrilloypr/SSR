@@ -1,6 +1,6 @@
 /*---------PAGINA INTRO---------*/
 var texto2 = "Sociedad Secreta del Ritmo";
-var enlace = "entrar";
+var enlace = "[entrar]";
 var velocidad = 100; // Velocidad en milisegundos para cada letra
 var j = 0;
 var k = 0;
