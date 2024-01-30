@@ -18,6 +18,12 @@ main {
     margin: 5px;
 }
 
+.boton-regreso .fa-arrow-left 
+{
+    color: #fff;
+    font-size: 1.2em;
+}
+
 h1 {
     font-size: 1.5em;
     color: #fff;
@@ -35,6 +41,7 @@ h2 {
 
 #contactoWhatsApp {
     margin-top: 20px;
+    margin-left: 20px;
     padding: 10px 20px;
     background-color: #25D366;
     color: white;
@@ -44,5 +51,76 @@ h2 {
 }
 
 #contactoWhatsApp:hover {
+    background-color: #1ebe5f;
+}
+
+.boton-regreso {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.icono-regreso {
+    width: 30px;
+    height: 30px;
+}
+
+.precios {
+    margin-top: 20px;
+    margin: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+    align-items: center;
+}
+
+h3 {
+    font-family: 'Helvetica Neue', Courier, monospace;
+    font-size: .7em;
+    color: #fff;
+    margin: 20px;
+    width: 350px;
+    margin-left: 110px;
+}
+
+.precios table {
+    margin-top: 20px;
+    color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.precios th, .precios td {
+    border: 1px solid #fff;
+    padding: 10px;
+    font-size: 0.7em;
+}
+
+.formulario-exclusivas {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.formulario-exclusivas form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-exclusivas input, .formulario-exclusivas textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.formulario-exclusivas button {
+    padding: 10px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.formulario-exclusivas button:hover {
     background-color: #1ebe5f;
 }
