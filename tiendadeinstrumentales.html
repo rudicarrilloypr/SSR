@@ -6,19 +6,22 @@
     <title>S.S.R.: Tienda de Instrumentales</title>
     <link rel="stylesheet" href="tiendadeinstrumentales.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
 </head>
 <body>
     <header>
         <a href="main.html" class="boton-regreso">
-            <i class="fa fa-arrow-left"></i> <!-- Asegúrate de tener un icono de flecha hacia atrás en tus assets -->
+            <i class="fa fa-arrow-left"></i>
         </a>
-        <img src="./assets/logos/ssr-icon.PNG" alt="SSR Logo" class="logo">
+        <a href="main.html">
+            <img src="./assets/logos/ssr-icon.PNG" alt="SSR Logo" class="logo">
+        </a>
     </header>
     <main>
         <h1>Instrumentales Disponibles</h1>
         <h3>Elige la instrumental que quieres y contáctanos presionando el botón de comprar Instrumental</h3>
-        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1765022901%3Fsecret_token%3Ds-CtoUZ8JblhI&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        <div class="soundcloud-responsive">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1765022901%3Fsecret_token%3Ds-CtoUZ8JblhI&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
         <button id="contactoWhatsApp">Comprar Instrumental</button>
 
         <!-- Sección de precios -->
