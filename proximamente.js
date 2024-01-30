@@ -1,5 +1,5 @@
 const proximamenteElement = document.getElementById('proximamente-text');
-let proximamenteTexto = 'pagina en construcción 🚧';
+let proximamenteTexto = '🚧 pagina en construcción';
 let proximamenteIndice = 0;
 let cursorVisible = false;
 
