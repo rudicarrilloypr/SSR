@@ -125,3 +125,12 @@ p {
 p:hover {
     color: #ff0000; /* Ajusta al tono de rojo deseado */
 }
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+h3 {
+    animation: blink 2s infinite; /* Ajusta la duración según necesites */
+}

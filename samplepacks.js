@@ -11,17 +11,19 @@ function typeWriter(element, text, i, interval) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const h3 = document.querySelector('h3');
-    if (h3) {
-        const h3Text = h3.innerText; // Guarda el texto inicial
-        typeWriter(h3, h3Text, 0, 100);
+    // Efecto de escritura para h1
+    const h1 = document.querySelector('h1');
+    if (h1) {
+        const h1Text = h1.innerText; // Guarda el texto inicial
+        typeWriter(h1, h1Text, 0, 100);
     }
 
+    // Efecto de escritura para p
     const paragraphs = document.querySelectorAll('p');
     paragraphs.forEach((p, index) => {
         const pText = p.innerText; // Guarda el texto inicial
         setTimeout(() => {
             typeWriter(p, pText, 0, 50);
-        }, (h3.innerText.length * 100) + 500 * index); // Espera a que el h3 termine
+        }, h1.innerText.length * 100 + 500 * index); // Espera a que el h1 termine
     });
 });
