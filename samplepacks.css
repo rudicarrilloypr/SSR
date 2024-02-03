@@ -57,7 +57,7 @@ h3 {
     color: #fff;
     margin: 20px;
     width: 350px;
-    margin-left: 40px;
+    margin-left: 81px;
 }
 
 .youtube-responsive {
@@ -86,6 +86,25 @@ h4 {
 p {
     font-size: 0.8em;
     color: #fff;
+    width: 90%;
+    margin-left: 20px;
+}
+
+p {
+    transition: color 0.6s ease-in-out;
+}
+
+p:hover {
+    color: #ff0000; /* Ajusta al tono de rojo deseado */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+h3 {
+    animation: blink 2s infinite; /* Ajusta la duración según necesites */
 }
 
 /* Nuevos estilos para botones de descarga y compra */
@@ -106,8 +125,45 @@ p {
     color: #000;
 }
 
+
+.sample-packs {
+    max-width: 80%; /* Define un ancho máximo para el contenedor */
+    margin: 20px auto; /* Centra el contenedor horizontalmente y añade un margen superior */
+    text-align: center; /* Alinea el texto a la izquierda dentro del contenedor */
+}
+
+.video-container {
+    width: 500px; /* Ancho fijo para el contenedor del video */
+    max-width: 100%; /* Asegura que el contenedor no exceda el ancho de la pantalla */
+    margin: auto; /* Centra el contenedor del video */
+    overflow: hidden; /* Asegura que nada se desborde fuera del contenedor */
+}
+
+.youtube-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Mantiene la relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.youtube-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Asegurándose de que los estilos sean coherentes en diferentes tamaños de pantalla */
 @media (min-width: 992px) {
+    p {
+        width: 70%;
+        margin-left: 178px;
+    }
+
+    h3 {
+        margin-left: 539px;
+    }
     .youtube-responsive {
         max-width: 80%; /* Ajusta según sea necesario para pantallas grandes */
         margin: auto; /* Centra el video */
@@ -117,21 +173,4 @@ p {
         font-size: 1.2em; /* Ajusta el tamaño del texto para pantallas grandes */
         padding: 10px 20px; /* Ajusta el relleno para pantallas grandes */
     }
-}
-
-p {
-    transition: color 0.6s ease-in-out;
-}
-
-p:hover {
-    color: #ff0000; /* Ajusta al tono de rojo deseado */
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-h3 {
-    animation: blink 2s infinite; /* Ajusta la duración según necesites */
 }

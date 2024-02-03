@@ -1,29 +1,14 @@
-function typeWriter(element, text, i, interval) {
-    if (i === 0) element.innerHTML = ''; // Limpia el texto inicial solo antes de empezar a escribir
-
-    if (i < text.length) {
-        element.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(function() {
-            typeWriter(element, text, i, interval);
-        }, interval);
-    }
-}
-
 document.addEventListener("DOMContentLoaded", function() {
-    // Efecto de escritura para h1
-    const h1 = document.querySelector('h1');
-    if (h1) {
-        const h1Text = h1.innerText; // Guarda el texto inicial
-        typeWriter(h1, h1Text, 0, 100);
+    // Aquí puedes mantener o agregar otros efectos que desees conservar.
+    // Por ejemplo, el efecto intermitente para h3, si lo hubiera.
+
+    const h3 = document.querySelector('h3');
+    if (h3) {
+        h3.style.opacity = '0'; // Establece la opacidad inicial a 0.
+        setInterval(() => {
+            h3.style.opacity = h3.style.opacity === '0' ? '1' : '0';
+        }, 1000); // Ajusta el intervalo según la rapidez con la que quieras que parpadee.
     }
 
-    // Efecto de escritura para p
-    const paragraphs = document.querySelectorAll('p');
-    paragraphs.forEach((p, index) => {
-        const pText = p.innerText; // Guarda el texto inicial
-        setTimeout(() => {
-            typeWriter(p, pText, 0, 50);
-        }, h1.innerText.length * 100 + 500 * index); // Espera a que el h1 termine
-    });
+    // Cualquier otro efecto que quieras mantener o agregar puede ir aquí.
 });
