@@ -84,8 +84,8 @@ h4 {
 p {
     font-size: 0.8em;
     color: #fff;
-    width: 90%;
-    margin-left: 20px;
+    width: 100%;
+    text-align: center;
 }
 
 p {
