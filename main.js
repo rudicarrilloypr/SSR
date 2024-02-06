@@ -18,7 +18,7 @@ secciones.forEach((seccion) => {
 });
 
 // función para el efecto de "escritura" del párrafo
-let textoParrafo = "Somos la sociedad secreta de productores musicales y beatmakers dedicada a ofrecer productos musicales de alta gama para cualquiera que los requiera...";
+let textoParrafo = "";
 let k = 0; // indice para recorrer el texto del parrafo
 let velocidadParrafo = 20; // ajusta la velocidad de escritura del parrafo
 
