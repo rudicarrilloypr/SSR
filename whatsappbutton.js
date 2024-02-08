@@ -6,17 +6,24 @@ document.getElementById('contactoWhatsApp').addEventListener('click', function()
 
 document.getElementById('contactForm').addEventListener('submit', function() {
     // Muestra un mensaje de carga
-    document.getElementById('formStatus').style.display = 'block';
-    document.getElementById('formStatus').textContent = 'Enviando...';
+    var formStatus = document.getElementById('formStatus');
+    formStatus.style.display = 'block';
+    formStatus.textContent = 'Enviando...';
+    formStatus.scrollIntoView({behavior: 'smooth'}); // Asegura que el mensaje sea visible
 });
 
 document.getElementById('hidden_iframe').addEventListener('load', function() {
     // Muestra un mensaje de éxito
-    document.getElementById('formStatus').textContent = 'Mensaje enviado exitosamente';
+    var formStatus = document.getElementById('formStatus');
+    formStatus.textContent = 'Mensaje enviado exitosamente';
+    formStatus.scrollIntoView({behavior: 'smooth'}); // Asegura que el mensaje sea visible
+    
     // Resetea el formulario
     document.getElementById('contactForm').reset();
-    // Opcionalmente, oculta el mensaje después de unos segundos
+    
+    // Opcionalmente, oculta el mensaje después de unos segundos y desplaza de nuevo hacia arriba
     setTimeout(function() {
-        document.getElementById('formStatus').style.display = 'none';
+        formStatus.style.display = 'none';
+        window.scrollTo({top: 0, behavior: 'smooth'}); // Desplaza hacia arriba suavemente
     }, 5000);
 });
