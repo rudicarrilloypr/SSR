@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="./assets/logos/rc-softdev-banner.PNG" alt="logo" height="auto" />
+  <img src="./assets/ssr-banner.PNG" alt="logo" height="auto" />
   <br/>
 
   <h3><b>Sociedad Secreta del Ritmo</b></h3>
