@@ -27,14 +27,14 @@
   - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
+- [❓ FAQ ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Sociedad Secreta del Ritmo <a name="about-project"></a>
 
-**S.S.R.** Repository for official website of the **Sociedad Secreta del Ritmo**.
+**S.S.R.** official website repo.
 
 
 ## 🛠 Built With <a name="built-with"></a>
