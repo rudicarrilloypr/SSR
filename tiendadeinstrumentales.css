@@ -146,3 +146,12 @@ h3 {
 .formulario-exclusivas button:hover {
     background-color: #1ebe5f;
 }
+
+@media (min-width: 992px) {
+    .soundcloud-responsive {
+        max-width: 200%; /* Ancho máximo más grande en escritorio */
+        width: 100%;
+        margin-left: auto; /* Centra el contenedor en la página */
+        margin-right: auto;
+    }
+}
