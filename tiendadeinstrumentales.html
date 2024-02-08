@@ -54,12 +54,19 @@
         <!-- Sección de formulario para instrumentales exclusivas -->
         <section class="formulario-exclusivas">
             <h3>Para instrumentales exclusivas contáctanos vía email:</h3>
-            <form action="https://formspree.io/f/mgegobkv" method="POST">
-                <input type="text" name="nombre" placeholder="nombre" required>
-                <input type="email" name="_replyto" placeholder="email" required>
-                <textarea name="mensaje" placeholder="cuentanos como quieres que diseñemos tu instrumental" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+<!-- Añade un iframe oculto para usar como destino del formulario -->
+<iframe name="hidden_iframe" id="hidden_iframe" style="display: none;"></iframe>
+
+<form action="https://formspree.io/f/mgegobkv" method="POST" target="hidden_iframe" id="contactForm">
+    <input type="text" name="nombre" placeholder="nombre" required>
+    <input type="email" name="_replyto" placeholder="email" required>
+    <textarea name="mensaje" placeholder="cuéntanos cómo quieres que diseñemos tu instrumental" required></textarea>
+    <button type="submit">Enviar</button>
+</form>
+
+<!-- Elemento para mostrar el mensaje de estado -->
+<div id="formStatus" style="display: none; color: #fff; margin-top: 10px;"></div>
+
         </section>
     </main>
     <script src= "whatsappbutton.js"></script>
