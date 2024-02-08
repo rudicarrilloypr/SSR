@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.S.R.: Tienda de Instrumentales</title>
+    <link rel="stylesheet" href="tiendadeinstrumentales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="main.html" class="boton-regreso">
+            <i class="fa fa-arrow-left"></i>
+        </a>
+        <a href="main.html">
+            <img src="./assets/logos/ssr-icon.PNG" alt="SSR Logo" class="logo">
+        </a>
+    </header>
+    <main>
+        <h1>Instrumentales Disponibles</h1>
+        <h3>Elige la instrumental que quieres y contáctanos presionando el botón de comprar Instrumental</h3>
+        <div class="soundcloud-responsive">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1765022901%3Fsecret_token%3Ds-CtoUZ8JblhI&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+        <button id="contactoWhatsApp">Comprar Instrumental</button>
+
+        <!-- Sección de precios -->
+        <section class="precios">
+            <h2>Precios de Instrumentales</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Formato</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MP3</td>
+                        <td>700 MXN</td>
+                    </tr>
+                    <tr>
+                        <td>WAV</td>
+                        <td>1300 MXN</td>
+                    </tr>
+                    <tr>
+                        <td>STEMS</td>
+                        <td>2500 MXN</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección de formulario para instrumentales exclusivas -->
+        <section class="formulario-exclusivas">
+            <h3>Para instrumentales exclusivas contáctanos vía email:</h3>
+<!-- Añade un iframe oculto para usar como destino del formulario -->
+<iframe name="hidden_iframe" id="hidden_iframe" style="display: none;"></iframe>
+
+<form action="https://formspree.io/f/mgegobkv" method="POST" target="hidden_iframe" id="contactForm">
+    <input type="text" name="nombre" placeholder="nombre" required>
+    <input type="email" name="_replyto" placeholder="email" required>
+    <textarea name="mensaje" placeholder="cuéntanos cómo quieres que diseñemos tu instrumental" required></textarea>
+    <button type="submit">Enviar</button>
+</form>
+
+<!-- Elemento para mostrar el mensaje de estado -->
+<div id="formStatus" style="display: none; color: #fff; margin-top: 10px;"></div>
+
+        </section>
+    </main>
+    <script src= "whatsappbutton.js"></script>
+    <script src="footer.js"></script>
+</body>
+</html>

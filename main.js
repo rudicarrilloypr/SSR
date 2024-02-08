@@ -18,9 +18,9 @@ secciones.forEach((seccion) => {
 });
 
 // función para el efecto de "escritura" del párrafo
-let textoParrafo = "Somos la sociedad secreta de productores musicales y beatmakers dedicada a ofrecer productos musicales de alta gama para cualquiera que los requiera...";
+let textoParrafo = "";
 let k = 0; // indice para recorrer el texto del parrafo
-let velocidadParrafo = 70; // ajusta la velocidad de escritura del parrafo
+let velocidadParrafo = 20; // ajusta la velocidad de escritura del parrafo
 
 function escribirParrafo() {
     if (k < textoParrafo.length) {
@@ -33,9 +33,9 @@ function escribirParrafo() {
 escribirParrafo(); // iniciamos la animación
 
 // Tu función existente
-var texto2 = "S.S.R.";
+var texto2 = "Sociedad Secreta del Ritmo";
 var j = 0;
-var velocidad = 500; // velocidad de la animación de escritura
+var velocidad = 100; // velocidad de la animación de escritura
 
 function escribirTitulo() {
     if (j < texto2.length) {
