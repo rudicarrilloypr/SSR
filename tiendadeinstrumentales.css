@@ -154,6 +154,24 @@ h3 {
     margin-top: 10px;
 }
 
+/* Añade estos estilos en tu archivo CSS existente */
+footer {
+    background-color: #222126; /* Ajusta el color de fondo según tu diseño */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.redes-sociales a {
+    margin: 0 10px;
+}
+
+.redes-sociales img {
+    width: 30px; /* Ajusta según el tamaño deseado */
+    height: auto;
+}
+
+
 
 @media (min-width: 992px) {
     .soundcloud-responsive {
