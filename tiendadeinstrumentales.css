@@ -160,6 +160,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    font-size: 0.7em;
 }
 
 .redes-sociales a {
@@ -167,8 +168,14 @@ footer {
 }
 
 .redes-sociales img {
-    width: 30px; /* Ajusta según el tamaño deseado */
+    width: 18px; /* Ajusta según el tamaño deseado */
     height: auto;
+    opacity: 0.4;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.redes-sociales a:hover img {
+    opacity: 1;
 }
 
 
