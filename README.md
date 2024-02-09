@@ -63,7 +63,7 @@ In this project was only used HTML and CSS.
 
 ## 🚀 Live  <a name="live-demo"></a>
 
-- access [sociedad secreta del ritmo](https://rudicarrilloypr.github.io/capstone-module-1/main.html)
+- access [sociedad secreta del ritmo](https://sociedadsecretadelritmo.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
