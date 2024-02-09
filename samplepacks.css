@@ -202,3 +202,11 @@ footer {
         padding: 10px 20px; /* Ajusta el relleno para pantallas grandes */
     }
 }
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    .youtube-responsive {
+        width: 78%; /* Ajusta este valor según lo angosto que quieras que sea el video */
+        margin: auto; /* Centra el video horizontalmente */
+    }
+}
