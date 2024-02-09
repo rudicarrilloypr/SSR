@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "/iconpage.html"
+  status = 200
