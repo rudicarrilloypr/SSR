@@ -186,5 +186,13 @@ footer {
         width: 100%;
         margin-left: auto; /* Centra el contenedor en la página */
         margin-right: auto;
+        height: 100px;
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    .soundcloud-responsive {
+        height: 90px;
     }
 }
