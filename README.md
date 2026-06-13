@@ -1,165 +1,182 @@
-<a name="readme-top"></a>
+# Sociedad Secreta del Ritmo
 
-<div align="center">
+SSR es una plataforma musical de acceso privado para descubrir y descargar
+samples, sample packs e instrumentales. La Fase 1 incluye autenticación,
+membresías, cuotas mensuales, catálogos, placeholders para Academia y Prompt
+Lab, y una consola administrativa básica.
 
-  <img src="./assets/ssr-banner.PNG" alt="logo" height="auto" />
-  <br/>
+> No todos escuchan la frecuencia. El ritmo no se busca. Se descifra.
 
-  <h3><b>Sociedad Secreta del Ritmo</b></h3>
+## Stack
 
-</div>
+- React 19 + TypeScript
+- Vite
+- React Router
+- Supabase Auth, Postgres, Storage y Row-Level Security
+- Netlify Functions y Netlify Hosting
+- Vitest + Testing Library
 
-<!-- TABLE OF CONTENTS -->
+Los archivos HTML, CSS y JavaScript originales siguen en el repositorio como
+referencia histórica. La aplicación nueva comienza en `index.html` y `src/`.
 
-# 📗 Table of Contents
+## Módulos incluidos
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live ](#live)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
-- [👥 Authors](#authors)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ ](#faq)
-- [📝 License](#license)
+- Portal SSR público
+- Login y registro
+- Dashboard de miembro
+- Vault de sample packs y samples
+- Catálogo de instrumentales
+- Historial y cuotas de descarga
+- Academia SSR preparada para cursos, módulos y lecciones
+- Prompt Lab SSR como placeholder de Fase 3
+- Consola del Archivista para gestionar packs e instrumentales
+- Esquema SQL, RLS, datos semilla y descarga con URL firmada
 
-<!-- PROJECT DESCRIPTION -->
+## Ejecutar localmente
 
-# 📖 Sociedad Secreta del Ritmo <a name="about-project"></a>
+Requisitos: Node.js 22 o superior.
 
-**S.S.R.** official website repo.
+```bash
+npm install
+npm run dev
+```
 
+Abrir `http://localhost:5173`.
 
-## 🛠 Built With <a name="built-with"></a>
+Sin variables de Supabase, la aplicación entra automáticamente en modo demo:
 
-- HTML
-- CSS
-- JavaScript
+- Miembro: cualquier correo normal.
+- Admin: un correo que contenga `archivista` o `admin`.
+- Contraseña demo sugerida: `frecuencia-privada`.
 
-### Tech Stack <a name="tech-stack"></a>
+El modo demo conserva la navegación, permisos, filtros y contadores durante la
+sesión del navegador. No debe usarse como autenticación de producción.
 
-In this project was only used HTML and CSS.
+## Verificación
 
-<!-- Features -->
+```bash
+npm run typecheck
+npm test
+npm run build
+```
 
-### Key Features <a name="key-features"></a>
+## Configurar Supabase
 
-- **Semantic HTML**
-- **CSS**
-- **Responsive Design**
-- **DOM**
-- **Linters**
+1. Crear un proyecto de Supabase.
+2. Ejecutar la migración:
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+```text
+supabase/migrations/202606130001_phase_one.sql
+```
 
-<!-- LIVE  -->
+3. Ejecutar los datos demo:
 
-## 🚀 Live  <a name="live-demo"></a>
+```text
+supabase/seed.sql
+```
 
-- access [sociedad secreta del ritmo](https://sociedadsecretadelritmo.netlify.app/)
+4. Copiar `.env.example` a `.env.local` y completar:
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+```bash
+VITE_SUPABASE_URL=https://PROJECT.supabase.co
+VITE_SUPABASE_ANON_KEY=...
+SUPABASE_URL=https://PROJECT.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=...
+SUPABASE_STORAGE_BUCKET=ssr-private
+```
 
-<!-- GETTING STARTED -->
+`SUPABASE_SERVICE_ROLE_KEY` solo debe existir en Netlify/servidor. Nunca se
+debe exponer con prefijo `VITE_`.
 
-## 💻 Getting Started <a name="getting-started"></a>
+5. Crear un usuario desde `/register` y convertir el primer administrador:
 
-To get a local copy up and running, follow these steps.
+```sql
+update public.users
+set role = 'admin'
+where email = 'tu-correo@dominio.com';
+```
 
-### Prerequisites
+6. Crear una suscripción activa para un usuario desde la consola admin de
+Supabase o mediante el futuro webhook del proveedor de pagos.
 
-In order to run this project you need:
-
-- VS Code or an IDE
-- NodeJS
-- Git
-- GitHub account
-
-## Setup
-
-Clone this repository to your desired folder:
-
-1. Click the green "Code" button and copy the repository URL.
-
-2. Open a terminal window and navigate to the directory where you want to clone the repository.
-
-3. Type "git clone" in the terminal window, followed by a space and then paste the repository URL https://github.com/rudicarrilloypr. Press "Enter" to clone the repository.
-
-4. Verify that the repository has been cloned successfully by checking the contents of the directory where you cloned it.
-
-5. That's all, you have the code!
-
-### Install
-
-Installation not required.
-
-### Usage
-
-Edit the code using VS Code or an IDE.
-
-### Run tests
-
-Test don't required.
-
-
-### Deployment
-
-You can deploy this project using your preferred deployment method. However we recommend using GitHub Pages link given in the project's description or in the Live Demo section.
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
-
-## 👥 Authors <a name="authors"></a>
-
-👤 **Rudi Carrillo**
-
-- GitHub: [@rudicarrilloypr](https://github.com/rudicarrilloypr)
-- Twitter: [@onlyargo](https://twitter.com/onlyargo)
-- LinkedIn: [Rudi Carrillo](https://linkedin.com/in/rudi-carrillo)
-- Instagram: [@__rudicarrillo](https://www.instagram.com/_rudicarrillo/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
- Thanks to the SSR team for the opportunity to work on this project.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-- **How do I set up the project?**
-
-  - Clone the repository from GitHub.
-
-- **How can I contribute to the project?**
-
-  1. Fork the repository on GitHub.
-  2. Create a new branch for your changes using git checkout -b my-feature-branch.
-  3. Make your changes and commit them with descriptive commit messages.
-  4. Push your changes to your forked repository.
-  5. Submit a pull request to the original repository.
-  6. Wait for feedback and iterate on your changes as needed.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./LICENSE) licensed.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+La migración crea dos buckets:
+
+- `ssr-previews`: público para previews.
+- `ssr-private`: privado para archivos descargables.
+
+Los `file_path` de las semillas son rutas de demostración. Para descargas
+reales deben subirse los ZIP/WAV correspondientes al bucket `ssr-private`.
+
+## Descargas
+
+El navegador no decide si una descarga está permitida.
+
+1. `POST /api/download` recibe el tipo e ID del contenido.
+2. La función envía el JWT del usuario al RPC `request_download`.
+3. Postgres bloquea solicitudes concurrentes del mismo usuario, valida
+   membresía, periodo, contenido publicado y cuota mensual.
+4. La descarga se registra en `downloads`.
+5. Netlify genera una URL firmada de 60 segundos para Storage privado.
+
+Los samples y sample packs consumen la misma cuota mensual. Los instrumentales
+usan una cuota separada. Un límite SQL `null` significa acceso ilimitado.
+
+## Planes semilla
+
+| Plan | Samples/mes | Instrumentales/mes | Cursos |
+| --- | ---: | ---: | --- |
+| Initiate | 10 | 0 | No |
+| Inner Circle | 50 | 5 | No |
+| Archivist | Ilimitados | Ilimitados | Sí |
+
+## Estructura principal
+
+```text
+src/
+  components/       UI compartida, audio, layouts y permisos
+  context/          Auth, contenido y descargas
+  lib/              tipos, datos demo, cuotas y cliente Supabase
+  pages/            rutas públicas, miembro y admin
+  styles/           sistema visual SSR
+netlify/functions/  validación y entrega de descargas
+supabase/
+  migrations/       esquema, RLS, Storage y RPC
+  seed.sql           planes y contenido de prueba
+docs/design/         conceptos visuales de referencia
+```
+
+## Rutas
+
+- `/`: Portal SSR
+- `/login`, `/register`: acceso
+- `/app`: dashboard protegido
+- `/vault`: samples y packs
+- `/instrumentales`: instrumentales
+- `/academia`: estructura de cursos
+- `/prompt-lab`: placeholder de IA musical
+- `/admin`: consola protegida por rol
+
+## Despliegue en Netlify
+
+El archivo `netlify.toml` configura:
+
+- Build: `npm run build`
+- Publicación: `dist`
+- Functions: `netlify/functions`
+- Proxy `/api/*`
+- Fallback SPA a `index.html`
+
+Agregar las variables de entorno de Supabase en Netlify antes de desplegar.
+
+## Pendiente para Fase 2
+
+- Proveedor de pagos y webhooks para renovar membresías.
+- Gestión de archivos y previews desde el formulario admin.
+- Editor completo de cursos, módulos, lecciones y playlists.
+- Hosting privado/transcodificación de video.
+- Emails transaccionales y recuperación de contraseña personalizada.
+- CMS del Netlabel para artistas, releases, álbumes, EPs y singles.
+- Analítica operativa, auditoría de acciones admin y moderación.
+- Pruebas E2E contra una instancia real de Supabase.
+
+Los conceptos visuales aprobados están en `docs/design/`.
