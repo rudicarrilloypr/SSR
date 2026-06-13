@@ -157,4 +157,3 @@ on conflict (id) do update set
   duration_seconds = excluded.duration_seconds,
   is_preview = excluded.is_preview,
   status = excluded.status;
-

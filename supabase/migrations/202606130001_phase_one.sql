@@ -611,4 +611,3 @@ grant execute on function public.request_download(
   public.download_content_type,
   uuid
 ) to authenticated;
-

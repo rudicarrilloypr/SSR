@@ -33,4 +33,3 @@ export function AdminRoute() {
 
   return <Outlet />;
 }
-

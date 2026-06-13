@@ -50,4 +50,3 @@ describe("download quotas", () => {
     expect(canDownload("instrumental", quota)).toBe(true);
   });
 });
-

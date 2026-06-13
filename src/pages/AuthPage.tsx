@@ -123,4 +123,3 @@ export function AuthPage({ mode }: { mode: "login" | "register" }) {
     </main>
   );
 }
-

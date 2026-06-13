@@ -17,4 +17,3 @@ export function CatalogShell({ children }: { children: ReactNode }) {
     </div>
   );
 }
-
